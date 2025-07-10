@@ -139,9 +139,12 @@
 <img alt="ícone" class="logo-icon" src="icon_computador.svg"/>
         Portfólio
       </div>
+<button class="mobile-menu-toggle" aria-label="Menu">
+  <i class="fas fa-bars"></i>
+</button>
 <nav class="nav-menu">
-<a class="" href="index.html">Início</a>
-<a class="" href="habilidades.html">Habilidades</a>
+<a href="index.html">Início</a>
+<a href="habilidades.html">Habilidades</a>
 <a class="active" href="sobre.html">Sobre</a>
 </nav>
 <a class="contact-btn" href="https://wa.me/5581982124698" target="_blank">Entrar em contato</a>
@@ -149,7 +152,7 @@
 <main>
 <div class="sobre-header">
 <h1 class="sobre-titulo">Sobre Mim</h1>
-<img alt="Foto de perfil" class="foto-perfil" src="foto-perfil-nova.png"/>
+<img alt="Foto de perfil" class="foto-perfil" src="foto-perfil-nova.png" loading="lazy"/>
 <p class="sobre-descricao" style="color: #555; font-size: 1.2rem; font-weight: 500; line-height: 1.6; text-shadow: 0 1px 2px rgba(0, 119, 255, 0.1);">
   Sou entusiasta da tecnologia e movido pela busca constante de novos aprendizados e desafios na área de TI. Minha trajetória começou com a curiosidade em entender o funcionamento por trás dos sistemas e, desde então, venho desenvolvendo habilidades em desenvolvimento e suporte técnico. Acredito no potencial transformador da tecnologia e é essa convicção que me impulsiona a evoluir continuamente e a contribuir com soluções criativas e eficazes. Estou sempre aberto a colaborar em projetos significativos, que tragam impacto real e possibilitem crescimento conjunto com a equipe.
 </p>
@@ -189,4 +192,15 @@
 <a href="https://www.instagram.com/l1ns_daniel" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
 <a href="https://www.linkedin.com/in/daniel-lins-19bb72221" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 </div>
-</footer></body></html>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+});
+</script>
+</body></html>

@@ -5,6 +5,7 @@ body {
   color: #333;
   position: relative;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .background-pattern {
@@ -298,13 +299,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 4px 40px !important;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative;
   z-index: 1;
   animation: fadeInUp 0.8s ease-out;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo {
@@ -335,9 +337,9 @@ header {
   background: linear-gradient(135deg, #0077ff, #005fcc);
   color: white;
   text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
@@ -392,6 +394,7 @@ header {
   line-height: 1.8;
   color: #1f1e1e;
   animation: fadeInUp 1s ease-out 0.7s both;
+  transition: color 0.3s ease;
 }
 
 .hero-img {
@@ -447,7 +450,7 @@ header {
   text-decoration: none;
   color: #0077ff;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 4px 12px;
   border-radius: 6px;
   position: relative;
   transition: all 0.3s ease;
@@ -490,6 +493,7 @@ header {
 .skills-page {
   padding: 80px 10%;
   color: #1f1f1f;
+  transition: color 0.3s ease;
 }
 
 .skills-page h1 {
@@ -676,6 +680,7 @@ header {
   margin-bottom: 22px;
   text-align: center;
   animation: fadeInUp 0.8s ease-out 0.6s both;
+  transition: color 0.3s ease;
 }
 
 .botao-curriculo {
@@ -786,7 +791,7 @@ header {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 4px 40px !important;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-top: 1px solid #e0e0e0;
@@ -795,6 +800,7 @@ footer {
   position: relative;
   z-index: 1;
   animation: fadeIn 1s ease-out 1s both;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 footer .links {
@@ -832,7 +838,281 @@ main {
   padding-bottom: 40px;
 }
 
-@media (max-width: 768px) {
+/* MODO ESCURO */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+  }
+
+  /* Circuito mais sutil no modo escuro */
+  .circuit-animation {
+    opacity: 0.3;
+  }
+
+  .data-line {
+    stroke: rgba(100, 180, 255, 0.4);
+  }
+
+  .data-line-secondary {
+    stroke: rgba(120, 200, 255, 0.3);
+  }
+
+  /* Header escuro */
+  header {
+    background-color: rgba(20, 20, 20, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Textos */
+  .hero-text p {
+    color: #c0c0c0;
+  }
+
+  .skills-page {
+    color: #e0e0e0;
+  }
+
+  .sobre-descricao {
+    color: #b0b0b0;
+  }
+
+  /* Cards e skills - CORRIGIDO PARA MODO ESCURO */
+  .skill {
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .skill:hover {
+    background-color: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 12px 25px rgba(0, 119, 255, 0.2);
+  }
+
+  /* CARDS DA PÁGINA SOBRE - CORRIGIDO */
+  .sobre-cards .skill {
+    background: rgba(25, 25, 25, 0.9) !important;
+    border: 2px solid #0066cc !important;
+    color: #e0e0e0;
+  }
+
+  .sobre-cards .skill h2 {
+    color: #e0e0e0 !important;
+  }
+
+  .sobre-cards .skill p {
+    color: #66b3ff !important;
+  }
+
+  .sobre-cards .skill ul li {
+    color: #66b3ff !important;
+  }
+
+  .sobre-cards .skill:hover {
+    background: rgba(35, 35, 35, 0.95) !important;
+    border-color: #0088ff !important;
+  }
+
+  /* Foto de perfil com borda escura */
+  .foto-perfil {
+    border: 4px solid #333;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    box-shadow: 0 0 0 3px rgba(100, 180, 255, 0.2), 0 15px 35px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .foto-perfil:hover {
+    box-shadow: 0 0 0 4px rgba(100, 180, 255, 0.3), 0 20px 45px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Imagens flutuantes com filtro escuro */
+  .intro-image {
+    filter: drop-shadow(0 6px 12px rgba(0, 119, 255, 0.2)) brightness(0.9) contrast(1.1);
+  }
+
+  .intro-image:hover {
+    filter: drop-shadow(0 12px 24px rgba(0, 119, 255, 0.3)) brightness(1.0) contrast(1.15);
+  }
+
+  .vector {
+    filter: drop-shadow(0 4px 8px rgba(0, 119, 255, 0.2)) brightness(0.9);
+  }
+
+  .vector:hover {
+    filter: drop-shadow(0 8px 16px rgba(0, 119, 255, 0.25)) brightness(1.0);
+  }
+
+  /* Footer escuro */
+  footer {
+    background-color: rgba(20, 20, 20, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b0b0b0;
+  }
+
+  /* Navegação */
+  .nav-menu a:hover {
+    background-color: rgba(0, 119, 255, 0.1);
+  }
+
+  .nav-menu a.active {
+    background-color: rgba(0, 119, 255, 0.2);
+  }
+
+  footer .links a:hover {
+    background-color: rgba(0, 119, 255, 0.1);
+  }
+}
+
+/* RESPONSIVIDADE PARA NOTEBOOK/LAPTOP (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .hero {
+    padding: 60px 8%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .vector {
+    width: 500px;
+  }
+
+  .intro-image {
+    width: 300px;
+  }
+
+  .skills-page {
+    padding: 60px 8%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .sobre-cards .skill {
+    width: 280px;
+  }
+
+  header {
+    padding: 4px 30px !important;
+  }
+
+  footer {
+    padding: 4px 30px !important;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+}
+
+/* RESPONSIVIDADE PARA TABLET (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .circuit-animation {
+    opacity: 0.3;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 6%;
+    min-height: auto;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 17px;
+  }
+
+  .hero-img {
+    margin-top: 20px;
+  }
+
+  .vector {
+    width: 400px;
+  }
+
+  .intro-image {
+    width: 250px;
+    top: -40px;
+    margin-left: 0;
+  }
+
+  .skills-page {
+    padding: 50px 6%;
+  }
+
+  .skills-page h1 {
+    font-size: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .sobre-cards {
+    gap: 20px;
+  }
+
+  .sobre-cards .skill {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sobre-titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre-descricao {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 4px 20px !important;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  footer {
+    padding: 4px 20px !important;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    padding: 3px 10px;
+    font-size: 13px;
+  }
+
+  .contact-btn {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+}
+
+/* RESPONSIVIDADE PARA MOBILE (até 480px) */
+@media (max-width: 480px) {
   .circuit-animation {
     display: none;
   }
@@ -840,16 +1120,122 @@ main {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 30px 5%;
+    min-height: auto;
   }
 
   .hero-text {
     max-width: 100%;
-    animation: fadeInUp 1s ease-out 0.3s both;
+    margin-bottom: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .hero-img {
-    margin-top: 40px;
-    animation: fadeInUp 1s ease-out 0.5s both;
+    margin-top: 15px;
+  }
+
+  .vector {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .intro-image {
+    width: 200px;
+    top: -20px;
+    margin-left: 0;
+    margin-bottom: -20px;
+  }
+
+  .skills-page {
+    padding: 40px 5%;
+  }
+
+  .skills-page h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill {
+    padding: 15px;
+  }
+
+  .skill h2 {
+    font-size: 18px;
+  }
+
+  .sobre-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .sobre-cards .skill {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 12px;
+  }
+
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+  }
+
+  .sobre-titulo {
+    font-size: 1.6rem;
+  }
+
+  .sobre-descricao {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .botao-curriculo {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  header {
+    padding: 4px 15px !important;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  footer {
+    padding: 4px 15px !important;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-menu {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-menu a {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+
+  .contact-btn {
+    padding: 3px 8px;
+    font-size: 11px;
   }
 
   footer .links {
@@ -857,24 +1243,327 @@ main {
     gap: 10px;
   }
 
-  .intro-image {
-    margin: 0 auto 20px;
-    animation: lampFloat 5s ease-in-out infinite 0.5s;
+  footer .links a {
+    font-size: 14px;
+  }
+}
+
+/* AJUSTES EXTRAS PARA TELAS MUITO PEQUENAS (até 320px) */
+@media (max-width: 320px) {
+  .hero-text h1 {
+    font-size: 22px;
   }
 
-  .sobre-cards {
-    flex-direction: column;
-    align-items: center;
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .skills-page h1 {
+    font-size: 24px;
+  }
+
+  .sobre-titulo {
+    font-size: 1.4rem;
   }
 
   .foto-perfil {
-    width: 220px;
-    height: 220px;
-    object-position: center;
-    image-rendering: auto;
+    width: 150px;
+    height: 150px;
+  }
+
+  .sobre-descricao {
+    font-size: 0.9rem;
+  }
+}
+
+/* MODO ESCURO ESPECÍFICO PARA MOBILE */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  /* Imagens ainda mais sutis no mobile escuro */
+  .intro-image {
+    filter: drop-shadow(0 4px 8px rgba(0, 119, 255, 0.15)) brightness(0.85) contrast(1.05);
   }
 
   .vector {
-    animation: vectorFloat 6s ease-in-out infinite 1s;
+    filter: drop-shadow(0 2px 6px rgba(0, 119, 255, 0.15)) brightness(0.85);
+  }
+
+  /* Cards com menos contraste no mobile */
+  .skill {
+    background-color: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .sobre-cards .skill {
+    background: rgba(20, 20, 20, 0.8) !important;
+    border: 1px solid #0055aa !important;
+  }
+}
+
+/* MELHORIAS PARA TODOS OS DISPOSITIVOS */
+
+/* Menu hambúrguer para mobile */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #0077ff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgba(0, 119, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Touch targets otimizados (mínimo 44px) */
+.nav-menu a,
+.contact-btn,
+.botao-curriculo,
+footer .links a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Otimização para tablets em landscape */
+@media (max-width: 1024px) and (min-width: 769px) and (orientation: landscape) {
+  .hero {
+    padding: 40px 8%;
+    min-height: 80vh;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .vector {
+    width: 450px;
+  }
+
+  .intro-image {
+    width: 280px;
+  }
+}
+
+/* Otimização para dispositivos com pouca bateria */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .circuit-animation {
+    display: none;
+  }
+
+  .intro-image,
+  .vector,
+  .foto-perfil {
+    animation: none;
+  }
+}
+
+/* Melhor legibilidade de fontes */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Otimização para telas ultra-wide */
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 5%;
+  }
+
+  .skills-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 5%;
+  }
+}
+
+/* Melhorias específicas para mobile */
+@media (max-width: 768px) {
+  /* Menu hambúrguer visível */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Menu de navegação colapsável */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu a {
+    padding: 12px 16px;
+    margin: 4px 0;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 48px;
+  }
+
+  /* Header ajustado para mobile */
+  header {
+    padding: 4px 15px !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Botão de contato menor no mobile */
+  .contact-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Espaçamento melhorado para touch */
+  .skills-grid {
+    gap: 20px;
+  }
+
+  .skill {
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  /* Footer com links maiores */
+  footer .links a {
+    padding: 12px 16px;
+    margin: 4px;
+    border-radius: 8px;
+    min-height: 48px;
+  }
+}
+
+/* Modo escuro para menu mobile */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .nav-menu {
+    background-color: rgba(20, 20, 20, 0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-menu-toggle {
+    color: #66b3ff;
+  }
+
+  .mobile-menu-toggle:hover {
+    background-color: rgba(0, 119, 255, 0.2);
+  }
+}
+
+/* Otimização para iPhone SE e dispositivos pequenos */
+@media (max-width: 375px) {
+  .hero-text h1 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .skills-page h1 {
+    font-size: 22px;
+  }
+
+  .sobre-titulo {
+    font-size: 1.3rem;
+  }
+
+  .foto-perfil {
+    width: 140px;
+    height: 140px;
+  }
+
+  .intro-image {
+    width: 180px;
+  }
+
+  .vector {
+    max-width: 280px;
+  }
+}
+
+/* Otimização para dispositivos com notch */
+@supports (padding-top: env(safe-area-inset-top)) {
+  header {
+    padding-top: calc(20px + env(safe-area-inset-top));
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding-top: calc(12px + env(safe-area-inset-top));
+    }
+  }
+}
+
+/* Melhor performance para animações */
+.intro-image,
+.vector,
+.foto-perfil,
+.skill,
+.contact-btn,
+.botao-curriculo {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Lazy loading para imagens */
+.intro-image,
+.vector,
+.foto-perfil {
+  loading: lazy;
+}
+
+/* Otimização para impressão */
+@media print {
+  .circuit-animation,
+  .contact-btn,
+  header,
+  footer {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero,
+  .skills-page {
+    padding: 20px;
   }
 }
