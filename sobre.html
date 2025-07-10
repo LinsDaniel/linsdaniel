@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Habilidades - Daniel Lins</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="background-pattern"></div>
+
+<!-- CIRCUITO ANIMADO PROFISSIONAL -->
+<div class="circuit-animation">
+  <svg class="circuit-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- Circuito Principal Superior -->
+    <g class="main-circuit">
+      <!-- Linha principal horizontal superior -->
+      <path class="data-line" d="M100,200 L400,200 L500,150 L800,150 L900,200 L1200,200 L1400,150 L1700,150" 
+            style="animation-delay: 0s;"/>
+      
+      <!-- Ramificações superiores -->
+      <path class="data-line-secondary" d="M300,200 L300,100 L600,100 L600,150" 
+            style="animation-delay: 0.5s;"/>
+      <path class="data-line-secondary" d="M1000,200 L1000,100 L1300,100 L1300,150" 
+            style="animation-delay: 1s;"/>
+    </g>
+
+    <!-- Processador Central -->
+    <g transform="translate(860, 400)">
+      <!-- Corpo do processador -->
+      <rect class="processor" x="-60" y="-40" width="120" height="80" rx="8" 
+            fill="rgba(0, 119, 255, 0.3)" stroke="rgba(0, 119, 255, 0.6)" stroke-width="2"/>
+      
+      <!-- Pinos do processador -->
+      <g class="processor">
+        <!-- Pinos superiores -->
+        <line x1="-40" y1="-40" x2="-40" y2="-60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="-20" y1="-40" x2="-20" y2="-60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="0" y1="-40" x2="0" y2="-60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="20" y1="-40" x2="20" y2="-60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="40" y1="-40" x2="40" y2="-60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        
+        <!-- Pinos inferiores -->
+        <line x1="-40" y1="40" x2="-40" y2="60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="-20" y1="40" x2="-20" y2="60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="0" y1="40" x2="0" y2="60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="20" y1="40" x2="20" y2="60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="40" y1="40" x2="40" y2="60" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        
+        <!-- Pinos laterais esquerdos -->
+        <line x1="-60" y1="-20" x2="-80" y2="-20" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="-60" y1="0" x2="-80" y2="0" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="-60" y1="20" x2="-80" y2="20" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        
+        <!-- Pinos laterais direitos -->
+        <line x1="60" y1="-20" x2="80" y2="-20" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="60" y1="0" x2="80" y2="0" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+        <line x1="60" y1="20" x2="80" y2="20" stroke="rgba(0, 119, 255, 0.8)" stroke-width="2"/>
+      </g>
+      
+      <!-- Indicador central do processador -->
+      <circle class="connection-node" cx="0" cy="0" r="8" 
+              fill="rgba(0, 200, 255, 0.6)" style="animation-delay: 0.3s;"/>
+    </g>
+
+    <!-- Conexões para o Processador -->
+    <g class="main-circuit">
+      <!-- Conexões superiores -->
+      <path class="data-line" d="M860,340 L860,200 L900,200" 
+            style="animation-delay: 1.5s;"/>
+      <path class="data-line" d="M860,340 L860,200 L800,200" 
+            style="animation-delay: 2s;"/>
+      
+      <!-- Conexões inferiores -->
+      <path class="data-line" d="M860,460 L860,600 L900,600" 
+            style="animation-delay: 2.5s;"/>
+      <path class="data-line" d="M860,460 L860,600 L800,600" 
+            style="animation-delay: 3s;"/>
+      
+      <!-- Conexões laterais -->
+      <path class="data-line-secondary" d="M780,400 L200,400 L200,350" 
+            style="animation-delay: 1s;"/>
+      <path class="data-line-secondary" d="M940,400 L1500,400 L1500,350" 
+            style="animation-delay: 1.5s;"/>
+    </g>
+
+    <!-- Circuito Inferior -->
+    <g class="main-circuit">
+      <!-- Linha principal horizontal inferior -->
+      <path class="data-line" d="M100,600 L400,600 L500,650 L800,650 L900,600 L1200,600 L1400,650 L1700,650" 
+            style="animation-delay: 3.5s;"/>
+      
+      <!-- Ramificações inferiores -->
+      <path class="data-line-secondary" d="M300,600 L300,750 L600,750 L600,650" 
+            style="animation-delay: 4s;"/>
+      <path class="data-line-secondary" d="M1000,600 L1000,750 L1300,750 L1300,650" 
+            style="animation-delay: 4.5s;"/>
+    </g>
+
+    <!-- Nós de Conexão -->
+    <circle class="connection-node" cx="200" cy="200" r="5" style="animation-delay: 0.2s;"/>
+    <circle class="connection-node" cx="400" cy="200" r="5" style="animation-delay: 0.4s;"/>
+    <circle class="connection-node" cx="800" cy="150" r="5" style="animation-delay: 0.6s;"/>
+    <circle class="connection-node" cx="1200" cy="200" r="5" style="animation-delay: 0.8s;"/>
+    <circle class="connection-node" cx="1500" cy="150" r="5" style="animation-delay: 1s;"/>
+    
+    <circle class="connection-node" cx="200" cy="600" r="5" style="animation-delay: 3.7s;"/>
+    <circle class="connection-node" cx="400" cy="600" r="5" style="animation-delay: 3.9s;"/>
+    <circle class="connection-node" cx="800" cy="650" r="5" style="animation-delay: 4.1s;"/>
+    <circle class="connection-node" cx="1200" cy="600" r="5" style="animation-delay: 4.3s;"/>
+    <circle class="connection-node" cx="1500" cy="650" r="5" style="animation-delay: 4.5s;"/>
+
+    <!-- Circuitos Laterais -->
+    <g class="main-circuit">
+      <!-- Lado esquerdo -->
+      <path class="data-line-secondary" d="M50,300 L200,300 L200,400 L300,400" 
+            style="animation-delay: 2.2s;"/>
+      <path class="data-line-secondary" d="M50,500 L200,500 L200,400" 
+            style="animation-delay: 2.7s;"/>
+      
+      <!-- Lado direito -->
+      <path class="data-line-secondary" d="M1650,300 L1500,300 L1500,400 L1400,400" 
+            style="animation-delay: 2.4s;"/>
+      <path class="data-line-secondary" d="M1650,500 L1500,500 L1500,400" 
+            style="animation-delay: 2.9s;"/>
+    </g>
+
+    <!-- Nós laterais -->
+    <circle class="connection-node" cx="200" cy="400" r="6" style="animation-delay: 2.5s;"/>
+    <circle class="connection-node" cx="1500" cy="400" r="6" style="animation-delay: 2.7s;"/>
+  </svg>
+</div>
+
+<header>
+<div class="logo">
+<img alt="ícone" class="logo-icon" src="icon_computador.svg"/>
+        Portfólio
+      </div>
+<nav class="nav-menu">
+<a class="" href="index.html">Início</a>
+<a class="" href="habilidades.html">Habilidades</a>
+<a class="active" href="sobre.html">Sobre</a>
+</nav>
+<a class="contact-btn" href="https://wa.me/5581982124698" target="_blank">Entrar em contato</a>
+</header>
+<main>
+<div class="sobre-header">
+<h1 class="sobre-titulo">Sobre Mim</h1>
+<img alt="Foto de perfil" class="foto-perfil" src="foto-perfil-nova.png"/>
+<p class="sobre-descricao" style="color: #555; font-size: 1.2rem; font-weight: 500; line-height: 1.6; text-shadow: 0 1px 2px rgba(0, 119, 255, 0.1);">
+  Sou entusiasta da tecnologia e movido pela busca constante de novos aprendizados e desafios na área de TI. Minha trajetória começou com a curiosidade em entender o funcionamento por trás dos sistemas e, desde então, venho desenvolvendo habilidades em desenvolvimento e suporte técnico. Acredito no potencial transformador da tecnologia e é essa convicção que me impulsiona a evoluir continuamente e a contribuir com soluções criativas e eficazes. Estou sempre aberto a colaborar em projetos significativos, que tragam impacto real e possibilitem crescimento conjunto com a equipe.
+</p>
+<a class="botao-curriculo" download="" href="Curriculo_Daniel_Lins.pdf">Baixar Currículo</a>
+</div>
+<div class="skills-grid sobre-cards" style="justify-content:center;gap: 32px;">
+<div class="skill" style="border:2px solid #007bff;background:#f8fafd;">
+<h2 style="color:#222;"><i class="fas fa-graduation-cap"></i> Estácio — Análise e Desenvolvimento de Sistemas</h2>
+<p style="color:#007bff;">Cursando graduação focada no desenvolvimento de sistemas, com aprendizado em lógica de programação, banco de dados, estruturas de software e tecnologias web. Em formação contínua para atuar com soluções inovadoras na área de TI.</p>
+</div>
+<div class="skill" style="border:2px solid #007bff;background:#f8fafd;">
+<h2 style="color:#222;"><i class="fas fa-tools"></i> Cursos práticos: montagem e manutenção</h2>
+<p style="color:#007bff;">Formação técnica voltada para montagem, manutenção e configuração de computadores. Abrange identificação de componentes, instalação de sistemas operacionais, diagnóstico de falhas e suporte técnico, com foco na prática e na resolução de problemas de hardware.</p>
+</div>
+<div class="skill" style="border:2px solid #007bff;background:#f8fafd;">
+<h2 style="color:#222;"><i class="fas fa-location-dot"></i> Meta</h2>
+<p style="color:#007bff;">Atuar no setor de tecnologia da informação aplicando habilidades em desenvolvimento e suporte, com foco em crescimento contínuo e contribuição estratégica para projetos inovadores.</p>
+</div>
+<div class="skill" style="border:2px solid #007bff;background:#f8fafd;">
+<h2 style="color:#222;"><i class="fas fa-robot"></i> SoftSkills</h2>
+<ul style="padding-left: 16px; margin-top: 8px; color:#007bff; list-style: none;">
+<li><i class="fas fa-brain"></i> Lógica</li>
+<li><i class="fas fa-bolt"></i> Proatividade</li>
+<li><i class="fas fa-laptop"></i> Adaptabilidade</li>
+<li><i class="fas fa-handshake"></i> Colaboração</li>
+<li><i class="fas fa-wifi"></i> Conectividade</li>
+<li><i class="fas fa-chart-bar"></i> Análise</li>
+<li><i class="fas fa-puzzle-piece"></i> Resolução de Problemas</li>
+<li><i class="fas fa-comments"></i> Comunicação</li>
+</ul>
+</div></div>
+</main>
+<footer>
+<p>© 2025 Daniel Lins De Melo Bezerra — Todos os direitos reservados</p>
+<div class="links">
+<a href="mailto:linsdaniel77@gmail.com"><i class="fas fa-envelope"></i> linsdaniel77@gmail.com</a>
+<a href="https://www.instagram.com/l1ns_daniel" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="https://www.linkedin.com/in/daniel-lins-19bb72221" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+</div>
+</footer></body></html>
